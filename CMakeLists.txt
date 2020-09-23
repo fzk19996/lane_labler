@@ -38,7 +38,7 @@ ADD_CUSTOM_TARGET(link_labels ALL COMMAND ${CMAKE_COMMAND} -E create_symlink ${C
 # ensure that custom configuration file is not overwritten.
 if(NOT EXISTS "${CMAKE_SOURCE_DIR}/bin/settings.cfg")
   message("-- Copyied default settings into bin. See 'settings.cfg' to change labeler settings.")
-  configure_file(${CMAKE_SOURCE_DIR}/assets/settings.cfg ${CMAKE_SOURCE_DIR}/bin/settings.cfg COPYONLY)
+  configure_file(${CMAKE_SOURCE_DIR}/lane_labler/assets/settings.cfg ${CMAKE_SOURCE_DIR}/bin/settings.cfg COPYONLY)
 endif()
 
 # since now everything resides in "bin", we have to copy some stuff.
